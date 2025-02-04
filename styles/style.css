@@ -1,0 +1,119 @@
+* {
+    font-family: Nunito;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Pusatkan secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal */
+    height: 100vh; /* Gunakan tinggi penuh viewport */
+    margin: 0;
+    background-color: #FFF7FC;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #8967B3;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.container {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.buttons {
+    margin-top: 20px; /* Beri jarak antara teks dan tombol */
+    position: relative;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+.yes-button {
+    text-decoration: none;
+    color: white;
+}
+
+.yes {
+    background-color: #8967B3;
+    color: white;
+    position: static;
+}
+
+.yes:hover {
+    background-color: #624E88;
+}
+
+.yes:active {
+    background-color: #4B164C;
+}
+
+.no {
+    background-color: black;
+    color: white;
+}
+
+.no:hover {
+    background-color: #624E88;
+}
+
+.no:hover {
+    background-color: #624E88;
+}
+
+.no:active {
+    background-color: #4B164C;
+}
+
+.paragraph-1 {
+    color: #624E88;
+    font-size: 20px;
+}
+
+.paragraph-1 span {
+    font-weight: bold;
+}
+
+.paragraph-2 {
+    color: #624E88;
+    font-size: 20px;
+}
+
+.gif2 {
+    width: 150px;
+}
+
+
+/* WA contact */
+
+.wa-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #8967B3;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.wa-button:hover {
+    background-color: #624E88;
+}
+
+.wa-button:active {
+    background-color: #4B164C;
+}

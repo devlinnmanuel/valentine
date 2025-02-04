@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Valentine's Day</title>
+        <link rel="stylesheet" href="styles/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <img src="assets/cute-sticker.gif" alt="cute sticker.gif" class="gif1">
+            <p class="title">Will You Be My Valentine?</p>
+            
+            <div class="buttons">
+                <button class="yes"><a href="next-page/congrats.html" class="yes-button">Yes ❤️</a></button>
+                <button class="no" onclick="moveButton()">No 🥺</button>
+            </div>
+        </div>
+
+        <script>
+            let clickCount = 0;
+    
+            function moveButton() {
+                let button = document.querySelector(".no");
+                let buttonsContainer = document.querySelector(".buttons");
+    
+                let maxX = buttonsContainer.clientWidth - button.clientWidth;
+                let maxY = buttonsContainer.clientHeight - button.clientHeight;
+    
+                let randomX = Math.floor(Math.random() * maxX);
+                let randomY = Math.floor(Math.random() * maxY);
+    
+                button.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    
+                // Tambahkan counter setiap klik
+                clickCount++;
+    
+                // Jika sudah 15x klik, kurangi opacity
+                if (clickCount >= 2) {
+                    let newOpacity = Math.max(1 - (clickCount - 1) * 0.1, 0);
+                    button.style.opacity = newOpacity;
+                    
+                    // Hilangkan tombol sepenuhnya jika sudah transparan
+                    if (newOpacity === 0) {
+                        button.style.display = "none";
+                    }
+                }
+            }
+        </script>
+
+        <!-- <script>
+            function moveButton() {
+                let button = document.querySelector(".no");
+                let container = document.querySelector(".container");
+        
+                let maxX = container.clientWidth - button.clientWidth;
+                let maxY = container.clientHeight - button.clientHeight;
+        
+                let randomX = Math.floor(Math.random() * maxX);
+                let randomY = Math.floor(Math.random() * maxY);
+        
+                button.style.left = randomX + "px";
+                button.style.top = randomY + "px";
+            }
+        </script> -->
+    </body>
+</html>
