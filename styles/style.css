@@ -117,3 +117,23 @@ button {
 .wa-button:active {
     background-color: #4B164C;
 }
+
+/* Media Query untuk Perangkat Kecil */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .paragraph-1, .paragraph-2 {
+        font-size: 14px;
+    }
+
+    .wa-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
