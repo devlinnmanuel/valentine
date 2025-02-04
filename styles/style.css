@@ -122,6 +122,8 @@ button {
 @media (max-width: 480px) {
     .container {
         padding: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .title {
